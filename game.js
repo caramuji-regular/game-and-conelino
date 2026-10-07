@@ -334,11 +334,16 @@ function spawnText(x, y, text, color) {
 
 function currentAnim() {
   if (p.hurt > 0) return "damage";
-  if (p.wave > 0) return "wave";
-  if (keys.down && p.grounded) return "crouch";
-  if (!p.grounded) return "pulo";
-  if (Math.abs(p.vx) > 25) return "run";
-  return p.facing < 0 ? "left" : "right";
+
+  if (p.wave > 0) return "idle";
+
+  if (keys.down && p.grounded) return "idle";
+
+  if (!p.grounded) return "jump";
+
+  if (Math.abs(p.vx) > 25) return "idle";
+
+  return "idle";
 }
 
 function frameFor(anim) {
