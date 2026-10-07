@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#071526">
+  <meta name="description"
+    content="Coninho no Trânsito - Jogo educativo de plataforma 2D sobre segurança no trânsito, em HTML5 e Canvas">
+  <title>Coninho no Trânsito — Fase 1-1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="wrap">
+    <div class="game-shell">
+      <canvas id="game" width="960" height="540"></canvas>
+
+      <button id="sound-toggle" class="audio-btn" aria-label="Alternar Áudio">🔊</button>
+
+      <div class="touch-ui" aria-hidden="true">
+        <div class="left-controls">
+          <button data-key="left" aria-label="Mover para Esquerda">◀</button>
+          <button data-key="right" aria-label="Mover para Direita">▶</button>
+        </div>
+        <div class="right-controls">
+          <button data-key="down" aria-label="Agachar">▼</button>
+          <button data-key="action" aria-label="Acenar">👋</button>
+          <button data-key="jump" aria-label="Pular">⤒</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="help">
+      <b>PC:</b> ← → / A D mover · Espaço/Z pular · X acenar · ↓/S agachar · P pausar · R reiniciar
+      <span>•</span>
+      <b>Poderes:</b> 🦺 crescer · 🪖 escudo · 👟 super pulo
+      <span>•</span>
+      <b>Celular:</b> use os botões na tela
+    </p>
+  </main>
+  <script src="game.js"></script>
+</body>
+
+</html>
